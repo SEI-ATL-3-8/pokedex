@@ -9,6 +9,7 @@ const AllPokemon = (props) => {
     const [filteredSearch, setFilteredSearch]= useState('')
     const [filteredResults, setFilteredResults] = useState([])
  
+
     const fetchAllPokemon = async () => {
         try {
             let response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=20&offset=200')
@@ -52,7 +53,12 @@ const AllPokemon = (props) => {
             filteredResults = {filteredResults}
             // pass down the searchTerm (whatever we type into the input)
             filteredSearch ={filteredSearch}
+            // pass down the save pokemon function to save a pokemon to our backend
             savePokemon ={props.savePokemon}
+            // pass down the isFave to evaluate if a pokemon has been favorited
+            isFave = {props.isFave}
+            // pass down the deletePokemon function to delete a pokemon from our backend
+            deletePokemon={props.deletePokemon}
             />
         </div>
     )

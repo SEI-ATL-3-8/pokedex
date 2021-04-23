@@ -5,6 +5,8 @@ const FavPokemon = (props) => {
             <h1>Favorite Pokemon</h1>
             <PokemonList 
             allPokemon={props.favPokemon}
+            isFave = {props.isFave}
+            deletePokemon ={props.deletePokemon}
             />
         </div>
     )

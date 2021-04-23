@@ -8,7 +8,13 @@ const PokemonList = (props) => {
                 key ={i}
                 className="singlePokemon">
                     <h1>{pokemon.name}</h1>
-                    <span className="heartOutline" onClick={() => props.savePokemon(pokemon.name)}>♡</span>
+                    {/* evaluate if the pokemon.name from the pokemon api exists inside of our favpokemonNames array and conditionally render the right heart with the right function*/}
+                    {props.isFave(pokemon.name) ? 
+                        <span className="heartOutline" onClick={() => props.deletePokemon(pokemon.name)}>❤️</span>
+                        :
+                        <span className="heartOutline" onClick={() => props.savePokemon(pokemon.name)}>♡</span>
+                    }
+                    
                 </div>
             ))
             :
@@ -18,7 +24,12 @@ const PokemonList = (props) => {
                 key ={i}
                 className="singlePokemon">
                     <h1>{pokemon.name}</h1>
-                    <span className="heartOutline" onClick={() => props.savePokemon(pokemon.name)}>♡</span>
+                    {/* evaluate if the pokemon.name from the pokemon api exists inside of our favpokemonNames array and conditionally render the right heart with the right function*/}
+                    {props.isFave(pokemon.name) ? 
+                        <span className="heartOutline" onClick={() => props.deletePokemon(pokemon.name)}>❤️</span>
+                        :
+                        <span className="heartOutline" onClick={() => props.savePokemon(pokemon.name)}>♡</span>
+                    }
                 </div>
             ))
             }

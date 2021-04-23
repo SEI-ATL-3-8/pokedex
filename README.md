@@ -1,3 +1,18 @@
+# Pokedex
+
+### User Stories
+- I can go to the All Pokemon page and see a list of all pokemon, fetched from https://pokeapi.co/
+- I can filter this list using a search bar
+- Each pokemon on this page has a Fav button next to it
+- When I click the Fav button, the pokemon is added to my favs list via a POST to the backend
+- An already-faved pokemon has its Fav button replaced with an icon that indicates that I've already faved it
+- I can go to the Faved Pokemon page and see a list of all my faved pokemon (fetched from the backend)
+- Stretch: for each of the faved pokemon, I see additional data from the api (types, stats, image, etc)
+- Stretch: I can click the already-faved icon for any pokemon and remove it from my faves
+
+### Setup
+Make a react app in this repo for the frontend. In a separate folder, clone down the backend from here: https://github.com/SEI-ATL-3-8/pokedex-backend. Run the backend locally to save your favs!
+
 ### 1
 - set up your routes and page transitions
 ### 2
